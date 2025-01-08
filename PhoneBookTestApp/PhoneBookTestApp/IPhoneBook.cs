@@ -1,8 +1,14 @@
-﻿namespace PhoneBookTestApp
+﻿using System.Collections.Generic;
+using NUnit.Framework;
+
+namespace PhoneBookTestApp
 {
     public interface IPhoneBook
     {
-        Person findPerson(string firstName, string lastName);
-        void addPerson(Person newPerson);
+        Person FindPerson(string firstName, string lastName);
+        void AddPerson(Person newPerson);
+        void PrintPersonDetails(Person personObj);
+
+        List<Person> GetAllPerson();
     }
 }
